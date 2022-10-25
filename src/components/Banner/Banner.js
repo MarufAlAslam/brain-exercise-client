@@ -12,6 +12,7 @@ const Banner = () => {
                         Learning Today, <br />
                         Leading Tomorrow
                     </h1>
+                    {/* <CountUp end={100} /> */}
 
                     <h4 className='lg:text-xl mt-5'>
                         BrainExercise is a platform where you can learn and practice programming skills. We have a large collection of courses and practice problems.

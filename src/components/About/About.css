@@ -1,0 +1,6 @@
+.about-bg {
+    background-image: url('./about.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+}

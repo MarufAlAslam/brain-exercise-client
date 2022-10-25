@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blogs from './pages/Blogs/Blogs';
+import Broken from './pages/Broken/Broken';
 import Courses from './pages/Courses/Courses';
 import Faqs from './pages/Faqs/Faqs';
 import Home from './pages/Home/Home';
@@ -42,7 +43,7 @@ function App() {
         },
         {
           path: '*',
-          element: <h2>Uh Oh!</h2>
+          element: <Broken></Broken>
         }
       ]
     }

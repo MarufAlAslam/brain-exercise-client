@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaStar, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import './Course.css';
 
 const Course = ({ course }) => {
     return (
@@ -24,7 +25,11 @@ const Course = ({ course }) => {
                     <p>
                         {course.description.length > 50 ? course.description.slice(0, 50) + '...' : course.description}
                     </p>
-                    <p className='text-white'>Instructor: {course.instructor}</p>
+                    <p className='text-white'>Instructor:</p>
+                    <div className='flex items-center'>
+                        <img src={course.instructor_image} className='rounded-full instructor-img' alt={course.instructor} />
+                        <p className='text-white'>{course.instructor}</p>
+                    </div>
                     <div className="divider"></div>
 
                     <div className="card-actions justify-between items-center">

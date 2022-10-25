@@ -8,3 +8,18 @@ img.logo.w-100 {
     align-items: center;
     font-size: 25px;
 }
+
+a.btn.btn-ghost.active {
+    background: #3ABFF8;
+    color: black;
+}
+
+.navbar-center a {
+    font-weight: 500;
+}
+
+.navbar.bg-sky-900 {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}

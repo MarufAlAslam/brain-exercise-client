@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css'
 const Header = () => {
     return (
@@ -24,10 +24,10 @@ const Header = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
-                    <li><Link to='/' >Home</Link></li>
-                    <li><Link to='/courses'>Courses</Link></li>
-                    <li><Link to='/faqs'>FAQs</Link></li>
-                    <li><Link to='/blogs'>Blogs</Link></li>
+                    <li><NavLink eventkey="1" to='/' end>HOME</NavLink></li>
+                    <li><NavLink eventkey="2" to='/courses' end>COURSES</NavLink></li>
+                    <li><NavLink eventkey="3" to='/faqs' end>FAQS</NavLink></li>
+                    <li><NavLink eventkey="4" to='/blogs' end>BLOGS</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end">
@@ -44,8 +44,8 @@ const Header = () => {
                     </span>
 
                 </label>
-                <Link to='/login' className='btn btn-ghost'>Sign In</Link>
-                <Link to='/signup' className='btn btn-ghost'>Sign Up</Link>
+                <NavLink to='/login' className='btn btn-ghost'>Sign In</NavLink>
+                <NavLink to='/signup' className='btn btn-ghost'>Sign Up</NavLink>
             </div>
         </div >
     );

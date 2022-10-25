@@ -29,6 +29,7 @@ const Courses = () => {
                     <div className='divider'></div>
                     <ul className='menu'>
                         {
+                            // eslint-disable-next-line array-callback-return
                             courses.map(course => {
                                 if (!categoryArray.includes(course.category)) {
                                     categoryArray.push(course.category)

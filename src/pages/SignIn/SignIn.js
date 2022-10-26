@@ -22,7 +22,7 @@ const SignIn = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate('/dashboard');
+                navigate(from, { replace: true });
                 setError(null);
                 setIsLoading(false);
             })
@@ -54,7 +54,7 @@ const SignIn = () => {
             const user = result.user;
             console.log(user);
             form.reset();
-            navigate('/dashboard');
+            navigate(from, { replace: true });
             setError(null);
             setIsLoading(false);
         }).catch(error => { setError(error.message) });

@@ -37,7 +37,7 @@ const Course = ({ course }) => {
                             <FaUser className='mr-2'></FaUser> <span className='text-white'>{course.totalEnrolled}</span>
                             <FaStar className='ml-3 mr-2'></FaStar> <span className='text-white'>{course.rating}</span>
                         </div>
-                        <Link to='' className="btn btn-primary">Learn More</Link>
+                        <Link to={`/course-details/${course.id}`} className="btn btn-primary">Learn More</Link>
                     </div>
                 </div>
             </div>

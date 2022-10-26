@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blogs from './pages/Blogs/Blogs';
 import Broken from './pages/Broken/Broken';
+import Checkout from './pages/Checkout/Checkout';
+import CourseDetails from './pages/CourseDetails/CourseDetails';
 import Courses from './pages/Courses/Courses';
 import Faqs from './pages/Faqs/Faqs';
 import Home from './pages/Home/Home';
@@ -51,6 +53,16 @@ function App() {
         {
           path: '/reset',
           element: <ResetPass></ResetPass>
+        },
+        {
+          path: '/course-details/:id',
+          loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`),
+          element: <CourseDetails></CourseDetails>
+        },
+        {
+          path: '/checkout/:id',
+          loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`),
+          element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
         },
         {
           path: '*',

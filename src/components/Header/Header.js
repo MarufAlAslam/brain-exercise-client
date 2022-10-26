@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import ReactTooltip from 'react-tooltip';
 import './Header.css'
@@ -8,7 +8,13 @@ import './Header.css'
 
 
 const Header = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const signOut = () => {
+        logOut()
+        navigate('/login');
+    }
     return (
         <div className="navbar bg-sky-900">
             <div className="navbar-start">
@@ -58,7 +64,7 @@ const Header = () => {
                                 <Link to='/dashboard' data-tip={user.displayName ? user.displayName : user.email} className="tooltip hover:tooltip-open tooltip-success tooltip-bottom">
                                     <img src={user.photoURL} alt={user?.displayName} className='w-10 h-10 rounded-full dp' />
                                 </Link>
-                                <NavLink to='/login' className='btn btn-ghost ml-2'>Sign Out</NavLink>
+                                <button onClick={signOut} className='btn btn-ghost ml-2'>Sign Out</button>
                             </div>
                         )
                         :

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import { FaSun, FaMoon, FaUserCircle } from 'react-icons/fa';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import ReactTooltip from 'react-tooltip';
@@ -62,7 +62,14 @@ const Header = () => {
                             // display user image
                             <div className='flex items-center'>
                                 <Link to='/dashboard' data-tip={user.displayName ? user.displayName : user.email} className="tooltip hover:tooltip-open tooltip-success tooltip-bottom">
-                                    <img src={user.photoURL} alt={user?.displayName} className='w-10 h-10 rounded-full dp' />
+                                    {
+                                        user.phoyoURL ? (
+                                            <img src={user.photoURL} alt={user?.displayName} className='w-10 h-10 rounded-full dp' />
+                                        ) :
+                                            (
+                                                <FaUserCircle className='block mx-auto my-4 text-4xl'></FaUserCircle>
+                                            )
+                                    }
                                 </Link>
                                 <button onClick={signOut} className='btn btn-ghost ml-2'>Sign Out</button>
                             </div>

@@ -6,7 +6,7 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const SignIn = () => {
 
-    const { providerLogin, signIn, error, setError } = useContext(AuthContext);
+    const { providerLogin, signIn, error, setError, setIsLoading } = useContext(AuthContext);
 
     const googleAuthProvider = new GoogleAuthProvider();
     const githubAuthProvider = new GithubAuthProvider();
@@ -17,28 +17,33 @@ const SignIn = () => {
     const navigate = useNavigate();
 
     const handleGoogleSignIn = () => {
+        setIsLoading(true);
         providerLogin(googleAuthProvider)
             .then(result => {
                 const user = result.user;
                 console.log(user);
                 navigate('/dashboard');
                 setError(null);
+                setIsLoading(false);
             })
             .catch(error => { setError(error.message) });
     }
 
     const handleGithubSignIn = () => {
+        setIsLoading(true);
         providerLogin(githubAuthProvider)
             .then(result => {
                 const user = result.user;
                 console.log(user);
                 navigate(from, { replace: true });
                 setError(null);
+                setIsLoading(false);
             })
             .catch(error => { setError(error.message) });
     }
 
     const handleFormSubmit = (e) => {
+        setIsLoading(true);
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
@@ -51,6 +56,7 @@ const SignIn = () => {
             form.reset();
             navigate('/dashboard');
             setError(null);
+            setIsLoading(false);
         }).catch(error => { setError(error.message) });
 
     }

@@ -63,7 +63,7 @@ const Header = () => {
                             <div className='flex items-center'>
                                 <Link to='/dashboard' data-tip={user.displayName ? user.displayName : user.email} className="tooltip hover:tooltip-open tooltip-success tooltip-bottom">
                                     {
-                                        user.phoyoURL ? (
+                                        user.photoURL ? (
                                             <img src={user.photoURL} alt={user?.displayName} className='w-10 h-10 rounded-full dp' />
                                         ) :
                                             (

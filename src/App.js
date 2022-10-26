@@ -6,6 +6,7 @@ import Courses from './pages/Courses/Courses';
 import Faqs from './pages/Faqs/Faqs';
 import Home from './pages/Home/Home';
 import Main from './pages/Main/Main';
+import ResetPass from './pages/ResetPass/ResetPass';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
 import User from './pages/User/User';
@@ -46,6 +47,10 @@ function App() {
         {
           path: '/dashboard',
           element: <PrivateRoute><User></User></PrivateRoute>
+        },
+        {
+          path: '/reset',
+          element: <ResetPass></ResetPass>
         },
         {
           path: '*',

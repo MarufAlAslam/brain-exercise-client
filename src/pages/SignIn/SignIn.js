@@ -86,6 +86,10 @@ const SignIn = () => {
                             null
                     }
 
+                    <div className='mb-4'>
+                        <p>Forget Password? <Link to='/reset' className='text-sky-500'>Reset Now!</Link></p>
+                    </div>
+
                     <div className='mb-4 text-center'>
                         <button className='btn btn-outline btn-success px-10'>Sign In</button>
                     </div>

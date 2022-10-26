@@ -8,6 +8,7 @@ import Home from './pages/Home/Home';
 import Main from './pages/Main/Main';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
+import User from './pages/User/User';
 
 function App() {
   const router = createBrowserRouter([
@@ -40,6 +41,10 @@ function App() {
         {
           path: '/signup',
           element: <SignUp></SignUp>
+        },
+        {
+          path: '/dashboard',
+          element: <User></User>
         },
         {
           path: '*',

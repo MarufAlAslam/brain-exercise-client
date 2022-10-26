@@ -55,9 +55,9 @@ const Header = () => {
                         (
                             // display user image
                             <div className='flex items-center'>
-                                <div data-tip={user?.displayName} className="tooltip hover:tooltip-open tooltip-success tooltip-bottom">
+                                <Link to='/dashboard' data-tip={user.displayName ? user.displayName : user.email} className="tooltip hover:tooltip-open tooltip-success tooltip-bottom">
                                     <img src={user.photoURL} alt={user?.displayName} className='w-10 h-10 rounded-full dp' />
-                                </div>
+                                </Link>
                                 <NavLink to='/login' className='btn btn-ghost ml-2'>Sign Out</NavLink>
                             </div>
                         )

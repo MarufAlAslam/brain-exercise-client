@@ -18,7 +18,7 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, provider);
     }
 
-    const creatUser = (email, password) => {
+    const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
@@ -37,7 +37,7 @@ const AuthProvider = ({ children }) => {
 
 
 
-    const authInfo = { user, providerLogin, setError, error, isLoading, setIsLoading, creatUser, signIn };
+    const authInfo = { user, providerLogin, setError, error, isLoading, setIsLoading, createUser, signIn };
 
 
     return (

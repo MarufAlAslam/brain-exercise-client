@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
+import ReactTooltip from 'react-tooltip';
 import './Header.css'
+
+
+
 const Header = () => {
+    const { user } = useContext(AuthContext);
     return (
         <div className="navbar bg-sky-900">
             <div className="navbar-start">
@@ -44,9 +50,27 @@ const Header = () => {
                     </span>
 
                 </label>
-                <NavLink to='/login' className='btn btn-ghost'>Sign In</NavLink>
-                <NavLink to='/signup' className='btn btn-ghost'>Sign Up</NavLink>
+                {
+                    user ?
+                        (
+                            // display user image
+                            <div className='flex items-center'>
+                                <div data-tip={user?.displayName} className="tooltip hover:tooltip-open tooltip-success tooltip-bottom">
+                                    <img src={user.photoURL} alt={user?.displayName} className='w-10 h-10 rounded-full dp' />
+                                </div>
+                                <NavLink to='/login' className='btn btn-ghost ml-2'>Sign Out</NavLink>
+                            </div>
+                        )
+                        :
+                        (<div>
+                            <NavLink to='/login' className='btn btn-ghost'>Sign In</NavLink>
+                            <NavLink to='/signup' className='btn btn-ghost'>Sign Up</NavLink>
+                        </div>)
+                }
+
+
             </div>
+            <ReactTooltip />
         </div >
     );
 };

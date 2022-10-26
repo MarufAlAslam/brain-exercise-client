@@ -6,7 +6,7 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const SignIn = () => {
 
-    const { providerLogin, signIn } = useContext(AuthContext);
+    const { providerLogin, signIn, error, setError } = useContext(AuthContext);
 
     const googleAuthProvider = new GoogleAuthProvider();
     const githubAuthProvider = new GithubAuthProvider();
@@ -19,8 +19,9 @@ const SignIn = () => {
                 const user = result.user;
                 console.log(user);
                 navigate('/dashboard');
+                setError(null);
             })
-            .catch(error => { console.error(error) });
+            .catch(error => { setError(error.message) });
     }
 
     const handleGithubSignIn = () => {
@@ -29,8 +30,9 @@ const SignIn = () => {
                 const user = result.user;
                 console.log(user);
                 navigate('/dashboard');
+                setError(null);
             })
-            .catch(error => { console.error(error) });
+            .catch(error => { setError(error.message) });
     }
 
     const handleFormSubmit = (e) => {
@@ -45,7 +47,8 @@ const SignIn = () => {
             console.log(user);
             form.reset();
             navigate('/dashboard');
-        }).catch(error => { console.error(error) });
+            setError(null);
+        }).catch(error => { setError(error.message) });
 
     }
 
@@ -64,6 +67,15 @@ const SignIn = () => {
                         <label className='mb-2 text-xl block'>Password:</label>
                         <input name='password' type="password" placeholder="Enter Your Password" className="input input-bordered input-success w-full" required />
                     </div>
+
+                    {
+                        error ? (
+                            <p className='bg-red-600 p-3 mb-4 mt-5 text-center animate-bounce text-white'>
+                                {error}
+                            </p>
+                        ) :
+                            null
+                    }
 
                     <div className='mb-4 text-center'>
                         <button className='btn btn-outline btn-success px-10'>Sign In</button>

@@ -9,6 +9,7 @@ import Main from './pages/Main/Main';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
 import User from './pages/User/User';
+import PrivateRoute from './routes/PrivateRoute';
 
 function App() {
   const router = createBrowserRouter([
@@ -44,7 +45,7 @@ function App() {
         },
         {
           path: '/dashboard',
-          element: <User></User>
+          element: <PrivateRoute><User></User></PrivateRoute>
         },
         {
           path: '*',

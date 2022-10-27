@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const SignUp = () => {
-    const { providerLogin, error, setError, createUser } = useContext(AuthContext);
+    const { providerLogin, error, setError, createUser, profileUpdate } = useContext(AuthContext);
 
     const googleAuthProvider = new GoogleAuthProvider();
     const githubAuthProvider = new GithubAuthProvider();
@@ -54,6 +54,7 @@ const SignUp = () => {
                 .then(result => {
                     const user = result.user;
                     console.log(user);
+                    profileUpdate(name, photoURL);
                     navigate('/dashboard');
                 })
                 .catch(error => { setError(error.message) });

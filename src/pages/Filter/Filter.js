@@ -11,7 +11,9 @@ const Filter = () => {
                 Filtered Courses
             </h2>
             <div className='grid lg:grid-cols-3 gap-4'>
-                {data.filter(course => course.category === category).map(course => <Course key={course.id} course={course}></Course>)}
+                {data.filter(course => course.category === category).map((course) => (
+                    <Course key={course.id} course={course}></Course>
+                ))}
             </div>
         </div>
     );

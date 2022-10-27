@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import app from '../../Firebase/firebase.config';
 // import { useNavigate } from 'react-router-dom';
 
@@ -52,9 +52,16 @@ const AuthProvider = ({ children }) => {
         return sendPasswordResetEmail(auth, email);
     }
 
+    const profileUpdate = (name, photoUrl) => {
+        updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: photoUrl
+        })
+    }
 
 
-    const authInfo = { user, providerLogin, setError, error, isLoading, setIsLoading, createUser, signIn, logOut, resetPassword };
+
+    const authInfo = { user, providerLogin, setError, error, isLoading, setIsLoading, createUser, signIn, logOut, resetPassword, profileUpdate };
 
 
     return (

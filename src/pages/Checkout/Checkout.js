@@ -9,7 +9,7 @@ const Checkout = () => {
     const { user } = useContext(AuthContext)
     console.log(user)
     return (
-        <div className='lg:w-3/4 w-full mx-auto py-10 lg:p-0 px-4'>
+        <div className='lg:w-3/4 w-full mx-auto py-10 lg:px-0 px-4'>
             <h2 className='text-center text-4xl font-bold'>
                 Checkout Now!
             </h2>

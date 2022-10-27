@@ -27,12 +27,12 @@ const Header = () => {
                         <li><NavLink eventkey="2" to='/courses' end>COURSES</NavLink></li>
                         <li><NavLink eventkey="3" to='/faqs' end>FAQS</NavLink></li>
                         <li><NavLink eventkey="4" to='/blogs' end>BLOGS</NavLink></li>
-                        <li><NavLink eventkey="5" to='/login' end>Sign In</NavLink></li>
-                        <li><NavLink eventkey="6" to='/signup' end>Sign Up</NavLink></li>
+                        <li><NavLink eventkey="5" to='/login' end>SIGN IN</NavLink></li>
+                        <li><NavLink eventkey="6" to='/signup' end>SIGN UP</NavLink></li>
                     </ul>
                 </div>
                 <Link className="btn btn-ghost normal-case text-3xl logoBtn" to='/'>
-                    <img src="./student.png" className='logo w-100 mr-2' alt="" />
+                    <img src="https://marufalaslam.github.io/test/student.png" className='logo w-100 mr-2' alt="" />
                     <span className='text-yellow-400'>Brain</span><span>Exercise</span> <small className='lg:hidden'>BE</small>
                 </Link>
             </div>
@@ -66,7 +66,7 @@ const Header = () => {
                                 <Link to='/dashboard' data-tip={user.displayName ? user.displayName : user.email} className="tooltip hover:tooltip-open tooltip-success tooltip-bottom">
                                     {
                                         user.photoURL ? (
-                                            <img src={user.photoURL} alt={user?.displayName} className='w-10 h-10 rounded-full dp' />
+                                            <img src={user.photoURL} alt="" className='w-10 h-10 rounded-full dp' />
                                         ) :
                                             (
                                                 <FaUserCircle className='block mx-auto my-4 text-4xl'></FaUserCircle>

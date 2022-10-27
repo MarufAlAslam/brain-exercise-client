@@ -27,7 +27,7 @@ const CourseDetails = () => {
                     </div>
 
                     <div className="lg:flex justify-between">
-                        <div className='w-1/2'>
+                        <div className='lg:w-1/2'>
                             <h1 className='text-lg bg-success inline-block px-3 rounded text-black mb-3'>
                                 Item ID: {data.id}
                             </h1>
@@ -74,7 +74,7 @@ const CourseDetails = () => {
                                 {data.totalEnrolled} Students
                             </p>
                         </div>
-                        <div className='w-1/2 flex justify-end'>
+                        <div className='lg:w-1/2 flex justify-end'>
                             <Pdf targetRef={ref} filename="code-example.pdf">
                                 {({ toPdf }) => <button onClick={toPdf} className='btn btn-outline btn-primary'>Download Pdf <FaDownload className='ml-2'></FaDownload></button>}
                             </Pdf>
@@ -89,7 +89,7 @@ const CourseDetails = () => {
                     <p className='mt-10 mb-3 bg-success inline-block px-3 rounded text-black'>
                         Some more Amazing thing about this course
                     </p>
-                    <div className="mt-5">
+                    <div className="mt-5 lg:overflow-hidden overflow-x-auto">
                         <table className="table w-full text-center">
                             <thead>
                                 <tr>

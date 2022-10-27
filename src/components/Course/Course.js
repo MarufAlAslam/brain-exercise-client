@@ -5,7 +5,7 @@ import './Course.css';
 
 const Course = ({ course }) => {
     return (
-        <div className='course-holder'>
+        <div className='course-holder lg:m-0 my-4'>
             <div className="card bg-sky-900 shadow-xl h-full">
                 <figure>
                     <img src={course.image} alt={course.name} />

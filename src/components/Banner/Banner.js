@@ -7,7 +7,7 @@ const Banner = () => {
     return (
         <div className='hero-banner py-40'>
             <div className='lg:w-3/4 mx-auto'>
-                <div className='w-1/2'>
+                <div className='lg:w-1/2'>
                     <h1 className='lg:text-5xl text-xl font-bold text-white'>
                         Learning Today, <br />
                         Leading Tomorrow

@@ -4,3 +4,9 @@
     background-size: cover;
     background-position: top right;
 }
+
+@media screen and (max-width: 992px) {
+    .hero-banner.py-40 {
+        padding: 100px 20px;
+    }
+}

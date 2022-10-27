@@ -25,3 +25,29 @@ img.w-full.course-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.8), #0F1729);
     z-index: 1;
 }
+
+@media screen and (max-width: 992px) {
+    img.w-full.course-banner {
+        position: unset;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .py-10.lg\:w-3\/4.w-full.mx-auto.course-contents {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+    }
+
+    .relative::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: unset;
+        z-index: 1;
+    }
+}

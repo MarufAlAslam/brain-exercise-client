@@ -2,13 +2,14 @@ import React from 'react';
 import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
+import './Checkout.module.css';
 
 const Checkout = () => {
     const data = useLoaderData()
     const { user } = useContext(AuthContext)
     console.log(user)
     return (
-        <div className='lg:w-3/4 w-full mx-auto py-10'>
+        <div className='lg:w-3/4 w-full mx-auto py-10 lg:p-0 px-4'>
             <h2 className='text-center text-4xl font-bold'>
                 Checkout Now!
             </h2>

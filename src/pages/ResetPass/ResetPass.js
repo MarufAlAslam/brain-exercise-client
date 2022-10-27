@@ -14,7 +14,7 @@ const ResetPass = () => {
         notify();
     }
     return (
-        <div className='lg:w-3/4 w-full mx-auto py-10'>
+        <div className='w-3/4 mx-auto py-10'>
             <h1 className='text-4xl font-bold text-center mb-7'>Reset Password</h1>
 
             <form onSubmit={handleSubmit(onSubmit)}>

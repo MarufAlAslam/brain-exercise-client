@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='px-5 py-10 bg-sky-900'>
             <div className='container mx-auto'>
                 <div className='lg:flex justify-between'>
-                    <div className='w-1/4 lg:pr-6'>
+                    <div className='lg:w-1/4 lg:m-0 my-4 lg:pr-6'>
                         <h2 className='text-xl text-white font-bold'>
                             BrainExercise
                         </h2>
@@ -25,7 +25,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className='lg:w-1/4'>
+                    <div className='lg:w-1/4 lg:m-0 my-4'>
                         <h2 className='text-xl text-white font-bold'>
                             Quick Links
                         </h2>
@@ -52,7 +52,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className='lg:w-1/4'>
+                    <div className='lg:w-1/4 lg:m-0 my-4'>
                         <h2 className='text-xl text-white font-bold'>
                             Follow Us On:
                         </h2>
@@ -79,7 +79,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className='lg:w-1/4'>
+                    <div className='lg:w-1/4 lg:m-0 my-4'>
                         <h2 className='text-xl text-white font-bold mb-4'>
                             Find Us Here:
                         </h2>

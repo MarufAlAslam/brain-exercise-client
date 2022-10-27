@@ -3,7 +3,7 @@ import errorImg from './Broken.svg';
 
 const Broken = () => {
     return (
-        <div className='text-center py-10'>
+        <div className='text-center py-10 lg:p-0 p-4'>
             <img src={errorImg} className='lg:w-1/4 w-3/4 block m-auto' alt="" />
 
             <h1 className='text-3xl text-white mt-5'>

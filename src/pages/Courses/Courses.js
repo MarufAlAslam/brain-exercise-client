@@ -25,7 +25,7 @@ const Courses = () => {
                     }
                 </div>
                 <div className='lg:w-1/3 w-100 p-10'>
-                    <p className='text-xl font-bold mb-5'>All Categories</p>
+                    <p className='text-xl font-bold mb-5'>Filter By Category</p>
                     <div className='divider'></div>
                     <ul className='menu'>
                         {
@@ -33,8 +33,12 @@ const Courses = () => {
                             courses.map(course => {
                                 if (!categoryArray.includes(course.category)) {
                                     categoryArray.push(course.category)
-                                    return (<li className='hover-bordered'>
-                                        <Link to="">
+                                    return (<li key={course.id} className='hover-bordered'>
+
+                                        <Link to={{
+                                            state: { category: course.category },
+                                            pathname: `/filter/${course.category}`
+                                        }}>
                                             {course.category}
                                         </Link>
                                     </li>)
@@ -44,7 +48,7 @@ const Courses = () => {
                     </ul>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

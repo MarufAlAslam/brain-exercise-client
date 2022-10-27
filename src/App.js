@@ -6,6 +6,7 @@ import Checkout from './pages/Checkout/Checkout';
 import CourseDetails from './pages/CourseDetails/CourseDetails';
 import Courses from './pages/Courses/Courses';
 import Faqs from './pages/Faqs/Faqs';
+import Filter from './pages/Filter/Filter';
 import Home from './pages/Home/Home';
 import Main from './pages/Main/Main';
 import ResetPass from './pages/ResetPass/ResetPass';
@@ -63,6 +64,11 @@ function App() {
           path: '/checkout/:id',
           loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`),
           element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
+        },
+        {
+          path: '/filter/:category',
+          loader: () => fetch("http://localhost:5000/courses"),
+          element: <Filter></Filter>
         },
         {
           path: '*',

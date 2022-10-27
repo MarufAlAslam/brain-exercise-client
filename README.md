@@ -24,7 +24,7 @@ and so on.
 
 ## Working Process
 
-1. Create a brand new react app using <span style='color: yellow'>create-react-app<span>
+1. Create a brand new react app using <span style='color: yellow'>`create-react-app`<span>
 
 2. Connect with git
 
@@ -38,7 +38,7 @@ and so on.
 
 6. Create Components/Pages where necessary
 
-7. Create Routes for the pages using <span style='color: yellow'>react router dom<span>
+7. Create Routes for the pages using <span style='color: yellow'>`react router dom`<span>
 
 8. Create a new folder for the context and create a context for the app
 
@@ -46,15 +46,15 @@ and so on.
 
 10. Create a Private route component and use it for the private routes.
 
-11. Create Sign in and sign up methods using <span style='color: yellow'>firebase auth<span>
+11. Create Sign in and sign up methods using <span style='color: yellow'>`firebase auth`<span>
 
-12. Build app using <span style='color: yellow'>npm build<span>
+12. Build app using <span style='color: yellow'>`npm build`<span>
 
 13. Connect the website with firebase hosting
 
-14. Deploy the app using <span style='color: yellow'>firebase deploy<span>
+14. Deploy the app using <span style='color: yellow'>`firebase deploy`<span>
 
-15. Go to the live link(http://brain-exercise-60233.web.app/) and enjoy the app
+15. Go to the live link <a href="http://brain-exercise-60233.web.app/">From Here</a> and enjoy the app
 
 
 ---

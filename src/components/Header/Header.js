@@ -23,15 +23,17 @@ const Header = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a href='/'>Home</a></li>
-                        <li><a href='/'>Courses</a></li>
-                        <li><a href='/'>FAQ</a></li>
-                        <li><a href='/'>Blogs</a></li>
+                        <li><NavLink eventkey="1" to='/' end>HOME</NavLink></li>
+                        <li><NavLink eventkey="2" to='/courses' end>COURSES</NavLink></li>
+                        <li><NavLink eventkey="3" to='/faqs' end>FAQS</NavLink></li>
+                        <li><NavLink eventkey="4" to='/blogs' end>BLOGS</NavLink></li>
+                        <li><NavLink eventkey="5" to='/login' end>Sign In</NavLink></li>
+                        <li><NavLink eventkey="6" to='/signup' end>Sign Up</NavLink></li>
                     </ul>
                 </div>
-                <Link className="btn btn-ghost normal-case text-3xl" to='/'>
+                <Link className="btn btn-ghost normal-case text-3xl logoBtn" to='/'>
                     <img src="./student.png" className='logo w-100 mr-2' alt="" />
-                    <span className='text-yellow-400'>Brain</span>Exercise
+                    <span className='text-yellow-400'>Brain</span><span>Exercise</span> <small className='lg:hidden'>BE</small>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -76,8 +78,8 @@ const Header = () => {
                         )
                         :
                         (<div>
-                            <NavLink to='/login' className='btn btn-ghost'>Sign In</NavLink>
-                            <NavLink to='/signup' className='btn btn-ghost'>Sign Up</NavLink>
+                            <NavLink to='/login' className='btn btn-ghost hid'>Sign In</NavLink>
+                            <NavLink to='/signup' className='btn btn-ghost hid'>Sign Up</NavLink>
                         </div>)
                 }
 

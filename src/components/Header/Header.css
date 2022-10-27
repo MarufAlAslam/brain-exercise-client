@@ -28,3 +28,39 @@ img.dp {
     width: 40px;
     height: 40px;
 }
+
+
+
+@media screen and (max-width: 992px) {
+    a.btn.btn-ghost.normal-case.text-3xl.logoBtn {
+        margin: 0 !important;
+        padding: 0;
+    }
+
+    a.btn.btn-ghost.normal-case.text-3xl.logoBtn span {
+        display: none;
+    }
+
+    small {
+        font-size: 60%;
+    }
+
+    .navbar-start {
+        width: auto;
+        justify-content: flex-start;
+    }
+
+    body,
+    html {
+        overflow-x: hidden !important;
+    }
+
+    .navbar-end {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .hid {
+        display: none;
+    }
+}
